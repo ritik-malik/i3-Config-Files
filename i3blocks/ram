@@ -1,4 +1,0 @@
-#!/bin/bash 
-
-echo $(free -h | grep -i 'MEM' | awk -F " " {'print $3'})
-
