@@ -7,6 +7,8 @@ This repo contains all the dotfiles files for i3 in Arch/Ubuntu
 * Istall i3 & other tools <br>
 `sudo apt install i3 i3lock i3status i3wm` <br>
 `sudo pacman -S i3 i3lock i3status i3wm`<br>
+* Other desired packages <br>
+`feh fonts-font-awesome rofi pulseaudio-utils xbacklight alsa-tools clipit gcc git terminator locate pcmanfm acpi libnotify-bin scrot`
 
 * Change the default config as backup<br>
 > located in .config/i3/config <br>
