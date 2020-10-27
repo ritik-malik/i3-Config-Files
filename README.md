@@ -13,7 +13,34 @@ This repo contains all the modified files for i3 in Arch.
 `mv ~/.config/i3/config ~/.config/i3/config.bak` <br>
 Replace it with new `config` in this repo <br>
 
+### Tweaks
+##### Workspace nomenclature -
+From line number 95 in config file<br>
+Set the workspace names <br>
+Can also use *[font awesome cheatsheet](https://fontawesome.com/cheatsheet?from=io)* for icons
+
+##### Assign apps to default workspace
+From line 130 in cofig file <br>
+Use `xprop | grep WM_CLASS | awk '{ print $4 }'` & then click on the app to find out it's class <br>
+Set it to desired workspace <br>
+Now whenever you open it, it defaults to that workspace
+
+##### i3 bar
+Start i3bar to display a workspace bar + the system information by custom scripts <br>
+Line number 202 in cofig file -<br>
+1. Set bar position
+2. Set the bar config files <br>
+* `i3blocks.conf` in this repo is the bar config file
 * 
+
+
+
+
+
+
+
+
+
 
 
 
