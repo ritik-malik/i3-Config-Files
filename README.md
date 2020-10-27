@@ -1,7 +1,7 @@
 # i3-Config-Files
 ## Contains all the i3 config files
 ### i3 + Arch = <3
-This repo contains all the modified files for i3 in Arch.
+This repo contains all the dotfiles files for i3 in Arch/Ubuntu
 
 ### Steps
 * Istall i3 & other tools <br>
