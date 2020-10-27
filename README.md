@@ -59,6 +59,7 @@ Line number 202 in cofig file -<br>
 * Xinput to enable touchpad at startup (sometimes not enabled by default)
 * Compton for smooth transition, fading effect
 * Blank screen settings
+* Can use `exec_always` for startup scripts
 
 #### TODO
 * Add better documentation
