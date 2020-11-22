@@ -1,0 +1,234 @@
+# set the super key
+set $mod Mod4
+
+# Font for window titles
+font pango:monospace 10
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# start a terminal
+bindsym $mod+Return exec gnome-terminal
+bindsym $mod+t exec gnome-terminal
+# i3-sensible terminal got weird config in mine, so modified gnome-terminal
+#bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+t exec i3-sensible-terminal
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# change focus
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
+# Define names for default workspaces for which we configure key bindings later on.
+set $ws1 "1 Terminal "
+set $ws2 "2 FireFox "
+set $ws3 "3 Code "
+set $ws4 "4 Nautilus "
+set $ws5 "5 Testing "
+set $ws6 "6 Testing "
+set $ws7 "7 Virtual Box "
+set $ws8 "8 Telegram "
+set $ws9 "9 VLC "
+set $ws10 "10 Spotify "
+
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+# now, assign default workspace for default apps ->
+### use `xprop | grep WM_CLASS` to get the class for respective app 
+assign [class="Firefox"] $ws2
+assign [class="Code"] $ws3
+assign [class="RStudio"] $ws3
+#assign [class="Atom"] $ws3
+#assign [class="Pluma"] $ws3
+assign [class="Nautilus"] $ws4
+assign [class="TelegramDesktop"] $ws8
+assign [class="vlc"] $ws9
+assign [class="VirtualBox"] $ws7
+for_window [class="Spotify"] move to workspace $ws10
+
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'i3 exit command trigerred...  ' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym semicolon resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+
+
+# define window colors
+set $bg-color 	         #2f343f
+set $inactive-bg-color   #2f343f
+set $text-color          #f3f4f5
+set $inactive-text-color #676E7D
+set $urgent-bg-color     #E53935
+
+# now set window colors
+#                       border              background         text                 indicator
+client.focused          $bg-color           #1663a6           #ffffff          #00ff00
+client.unfocused        $inactive-bg-color  #050000	      #f8fc03          #00ff00
+client.focused_inactive $inactive-bg-color  #050000 	      #f80b1a          #00ff00
+client.urgent           $urgent-bg-color    $urgent-bg-color  $text-color     #00ff00
+
+hide_edge_borders both
+
+# Start i3bar to display a workspace bar (plus the system information i3status finds out, if available)
+# using custom i3blocks config file here
+
+bar {
+		position top
+        status_command i3blocks -c ~/.config/i3/i3blocks.conf
+	# i3status
+}
+
+
+# blur lock instead of i3lock
+bindsym $mod+Shift+x exec --no-startup-id /home/$USER/.config/i3/i3lock_temp/blur_lock.sh
+#i3lock
+
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+# Sreen brightness controls [not working in my PC, using brightnessctl instead]
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+
+# start dmenu (a program launcher)
+bindsym $mod+d exec rofi -show run -font "ubuntu mono 18" -opacity "5" -fg "#ee1627" -bg "#3b5e7c" -hlfg "#ffb964" -hlbg "#000000" -width 30 -lines 5 -padding 20 -separator-style none -hide-scrollbar -bw 4 -bc "#3b5e7c"
+
+#rofi -show run -lines 4 -eh 2 -width 100 -padding 800 -opacity "55" -bw 0 -bc "#3b5e7c" -bg "#3b5e7c" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "System San Francisco Display 18"
+
+# wallpaper [set path accordingly]
+exec_always feh --bg-scale /home/$USER/.config/i3/wallpaper.jpg
+
+
+# enable tap to touch on startup [prop number varies so set accordingly]
+exec xinput set-prop 14 322 1
+## check using - xinput list-props `touchpad_number`
+
+# other startup config -
+#
+# compton for fading effect
+exec_always compton -f
+#
+# turn off blank screen settings
+exec_always xset s on
+exec_always xset +dpms
+
+#exec i3-sensible-terminal
+
+# set default brightness - if using brightnessctl
+#exec_always brightnessctl s 15%
+
+
+# Sreen brightness controls
+#bindsym XF86MonBrightnessUp exec echo $((`cat /sys/class/backlight/intel_backlight/brightness` + 10)) | tee /sys/class/backlight/intel_backlight/brightness
+#bindsym XF86MonBrightnessDown exec echo $((`cat /sys/class/backlight/intel_backlight/brightness` - 10)) | tee /sys/class/backlight/intel_backlight/brightness
