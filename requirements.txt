@@ -28,6 +28,9 @@ acpi
 libnotify-bin
 scrot
 htop
+wget
+curl
+lxappearance
 
 ## Non Essentials
 python3-pip
