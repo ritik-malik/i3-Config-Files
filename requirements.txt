@@ -1,8 +1,40 @@
+-- to be updated
+
+## Essentials
+
+i3
+i3lock
+i3status
+i3-wm
+i3blocks
 compton
 rofi
 sysstat
 lm-sensors
-i3blocks
-
 brightnessctl
 imagemagick-6.q16
+feh
+dmenu
+fonts-font-awesome
+rofi
+pulseaudio-utils
+xbacklight
+alsa-tools
+clipit
+terminator
+locate
+pcmanfm
+acpi
+libnotify-bin
+scrot
+htop
+
+## Non Essentials
+python3-pip
+git
+gcc
+vlc
+code
+spotify
+chrome
+
