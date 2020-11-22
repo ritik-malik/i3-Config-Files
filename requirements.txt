@@ -1,0 +1,8 @@
+compton
+rofi
+sysstat
+lm-sensors
+i3blocks
+
+brightnessctl
+imagemagick-6.q16
