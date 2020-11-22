@@ -19,7 +19,7 @@ This repo contains all the dotfiles files for i3 in Arch/Ubuntu <br><br>
 
 
 
-## deprecated stuff
+## deprecated stuff, but worth a read for debugging
 ------------------------------------------------------------
 
 ### Steps
