@@ -4,7 +4,7 @@
 This repo contains all the dotfiles files for i3 in Arch/Ubuntu
 
 ### Steps
-* Istall i3 & other tools <br>
+* Install i3 & other tools <br>
 `sudo apt install i3 i3lock i3status i3wm` <br>
 `sudo pacman -S i3 i3lock i3status i3wm`<br>
 * Other desired packages <br>
