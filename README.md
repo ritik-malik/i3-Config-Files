@@ -2,11 +2,20 @@
 ## Contains all the i3 config files
 ### i3 + Arch = <3
 This repo contains all the dotfiles files for i3 in Arch/Ubuntu <br><br>
+### Steps -
+* Clone the repo
+* `chmod +x maalik.sh`
+* `sudo ./maalik.sh`
+* Logout of current session & select i3 in new one
+* Common problems -
+  * Some dependency issue
+  * Wifi driver name maybe different, change in `i3blocks.conf` & in `i3blocks/ssid`
+  * Some default settings in `config` file, like touchpad - xinput
 
 #### TODO : <br>
-* make a script for autoinstallation <br>
-* change source code + add new files <br>
-* add dependencies <br><br>
+* make a script for autoinstallation \[done]<br>
+* change source code + add new files \[done]<br>
+* add dependencies \[done]<br><br>
 
 
 
