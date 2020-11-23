@@ -211,7 +211,7 @@ exec_always feh --bg-scale /home/$USER/.config/i3/wallpaper.jpg
 
 
 # enable tap to touch on startup [prop number varies so set accordingly]
-exec xinput set-prop 14 322 1
+exec_always xinput set-prop 13 306 1
 ## check using - xinput list-props `touchpad_number`
 
 # other startup config -
