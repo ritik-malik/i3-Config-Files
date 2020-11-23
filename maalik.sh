@@ -4,7 +4,7 @@
 # a simple script to install the dotfiles & dependencies
 
 # install some essential dependencies
-apt install i3 i3lock i3status i3-wm i3blocks compton rofi sysstat lm-sensors brightnessctl imagemagick-6.q16 feh dmenu fonts-font-awesome rofi pulseaudio-utils xbacklight alsa-tools clipit terminator locate pcmanfm acpi libnotify-bin scrot htop -y
+apt install i3 i3lock i3status i3-wm i3blocks compton rofi sysstat lm-sensors brightnessctl imagemagick-6.q16 feh dmenu fonts-font-awesome rofi pulseaudio-utils xbacklight alsa-tools clipit terminator locate pcmanfm acpi libnotify-bin scrot htop curl wget -y
 
 cd DOT_FILES
 mkdir -p ~/.config/i3
