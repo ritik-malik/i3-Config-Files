@@ -14,4 +14,4 @@ cp -r config i3blocks.conf i3lock_temp/ ~/.config/i3
 mkdir -p /usr/lib/i3blocks
 cp -r i3blocks/ /usr/lib/i3blocks
 
-echo Done!
+echo "Done!"
