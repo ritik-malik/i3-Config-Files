@@ -110,6 +110,7 @@ assign [class="Code"] $ws3
 assign [class="RStudio"] $ws3
 #assign [class="Atom"] $ws3
 #assign [class="Pluma"] $ws3
+assign [class="Google-chrome"] $ws4
 assign [class="Nautilus"] $ws4
 assign [class="TelegramDesktop"] $ws8
 assign [class="vlc"] $ws9
