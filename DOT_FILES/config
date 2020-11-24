@@ -209,9 +209,12 @@ bindsym $mod+d exec rofi -show run -font "ubuntu mono 18" -opacity "5" -fg "#ee1
 # wallpaper [set path accordingly]
 exec_always feh --bg-scale /home/$USER/.config/i3/wallpaper.jpg
 
+# "NEW FUNCTION TO IDENTIFY AND ENABLE TAPPING"
+exec_always xinput set-prop $(xinput | grep Touchpad | cut -d "=" -f 2 | awk '{ print $1 }') $(xinput list-props $(xinput | grep Touchpad | cut -d "=" -f 2 | awk '{ print $1 }') | grep "Tapping Enabled" | head -1 | grep -oP '\(\K[^\)]+') 1
 
+# "DEPRECATED"
 # enable tap to touch on startup [prop number varies so set accordingly]
-exec_always xinput set-prop 13 306 1
+# exec_always xinput set-prop 13 306 1
 ## check using - xinput list-props `touchpad_number`
 
 # other startup config -
