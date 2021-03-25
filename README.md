@@ -3,7 +3,7 @@
 ### i3 + Arch = <3
 This repo contains all the dotfiles files for i3 in Arch/Ubuntu <br><br>
 ### Steps -
-* Clone the repo
+* Clone the repo : `git clone https://github.com/ritik-malik/i3-Config-Files`
 * `chmod +x maalik.sh`
 * `sudo ./maalik.sh`
 * Logout of current session & select i3 in new one
